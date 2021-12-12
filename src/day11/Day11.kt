@@ -1,7 +1,7 @@
 package day11
 
 import measure
-import readInput
+import readTo2DArray
 
 // Including diagonals
 fun neighbors(x: Int, y: Int, width: Int, length: Int): List<Pair<Int, Int>> =
@@ -124,12 +124,8 @@ fun octoparty(levels: Array<Array<Int>>, steps: Int, verbose: Boolean): Int {
 
 fun main() {
     val part1 = measure({ println("Part 1 took $it ms") }) {
-        val testLevels = readInput("day11/test")
-            .map { it.toCharArray().map(Char::digitToInt).toTypedArray() }
-            .toTypedArray()
-        val levels = readInput("day11/input")
-            .map { it.toCharArray().map(Char::digitToInt).toTypedArray() }
-            .toTypedArray()
+        val testLevels = readTo2DArray("day11/test")
+        val levels = readTo2DArray("day11/input")
 
         check(octoparty(testLevels, 100, false) == 1656)
         flashes = 0
@@ -138,12 +134,8 @@ fun main() {
     println(" Answer: $part1")
 
     val part2 = measure({ println("Part 2 took $it ms") }) {
-        val testLevels = readInput("day11/test")
-            .map { it.toCharArray().map(Char::digitToInt).toTypedArray() }
-            .toTypedArray()
-        val levels = readInput("day11/input")
-            .map { it.toCharArray().map(Char::digitToInt).toTypedArray() }
-            .toTypedArray()
+        val testLevels = readTo2DArray("day11/test")
+        val levels = readTo2DArray("day11/input")
 
         check(octoparty(testLevels, 200, false) == 195)
         octoparty(levels, 500, false) // 229

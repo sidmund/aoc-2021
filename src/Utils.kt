@@ -13,6 +13,19 @@ fun readInput(filename: String) = File("src", "$filename.txt").readLines()
 fun readInputAsInt(filename: String) = File("src", "$filename.txt").readLines().map(String::toInt)
 
 /**
+ * Reads lines for given input txt file, converting them to an 2-dimensional array of integers.
+ * Each line should be of equal length, and the file should only contain integers.
+ * Example input:
+ * """
+ * 2145364575
+ * 4690259237
+ * 4906890466
+ * """
+ */
+fun readTo2DArray(filename: String): Array<Array<Int>> = readInput(filename)
+    .map { it.toCharArray().map(Char::digitToInt).toTypedArray() }.toTypedArray()
+
+/**
  * Converts string to md5 hash.
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
