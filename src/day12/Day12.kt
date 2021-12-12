@@ -3,34 +3,33 @@ package day12
 import measure
 import readInput
 
-fun String.isLowerCase(): Boolean = this.toCharArray()
-    .fold(true) { allLowerCase, char -> allLowerCase && char.isLowerCase() }
-
+// returns just the path count
 fun pathfinder(
     nodes: Map<String, MutableSet<String>>,
     current: String = "start",
     visited: List<String> = listOf(),
     twice: Boolean = false
-): List<List<String>> {
+): Int {
 
     val newVisited = visited + current
     if (current == "end") {
-        return listOf(newVisited)
+        return 1
     }
 
     val neighbors = nodes[current]
         ?.filter { neighbor ->
             neighbor != "start"
                     && !(
-                    neighbor.isLowerCase() && newVisited.contains(neighbor)
+                    // Assume: nodes are only fully lowercase or fully uppercase
+                    neighbor[0].isLowerCase() && newVisited.contains(neighbor)
                             && (
-                            (twice && newVisited.filter { node -> node.isLowerCase() }.groupBy { it }
+                            (twice && newVisited.filter { node -> node[0].isLowerCase() }.groupBy { it }
                                 .any { entry -> entry.value.size >= 2 })
                                     || (!twice)
                             )
                     )
         } ?: emptyList()
-    return neighbors.flatMap { pathfinder(nodes, it, newVisited, twice) }
+    return neighbors.sumOf { pathfinder(nodes, it, newVisited, twice)}
 }
 
 fun main() {
@@ -53,12 +52,12 @@ fun main() {
         }
 
         val part1 = measure({ println("Part 1 took $it ms") }) {
-            pathfinder(nodes, twice = false).size
+            pathfinder(nodes, twice = false)
         }
         println(" Answer: $part1 (${if (answers.first == part1) "correct" else "wrong"})")
 
         val part2 = measure({ println("Part 2 took $it ms") }) {
-            pathfinder(nodes, twice = true).size
+            pathfinder(nodes, twice = true)
         }
         println(" Answer: $part2 (${if (answers.second == part2) "correct" else "wrong"})")
 
