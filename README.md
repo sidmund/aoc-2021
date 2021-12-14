@@ -4,7 +4,7 @@ Welcome to my attempt at solving the [Advent of Code][aoc] challenges. This is m
 
 | Challenge | Main feature |
 | :--       | :--          |
-| `01` [**Sonar Sweep****](https://github.com/sidmund/aoc-2021/blob/main/src/day01/Day01.kt) ([*puzzle*](https://adventofcode.com/2021/day/1)) | Counting |  
+| `01` [**Sonar Sweep**](https://github.com/sidmund/aoc-2021/blob/main/src/day01/Day01.kt) ([*puzzle*](https://adventofcode.com/2021/day/1)) | Counting |  
 | `02` [**Dive!**](https://github.com/sidmund/aoc-2021/blob/main/src/day02/Day02.kt) ([*puzzle*](https://adventofcode.com/2021/day/2)) | Parsing commands |  
 | `03` [**Binary Diagnostic**](https://github.com/sidmund/aoc-2021/blob/main/src/day03/Day03.kt) ([*puzzle*](https://adventofcode.com/2021/day/3)) | Dealing with binary |  
 | `04` [**Giant Squid**](https://github.com/sidmund/aoc-2021/blob/main/src/day04/Day04.kt) ([*puzzle*](https://adventofcode.com/2021/day/4)) | Simulating Bingo |  
@@ -17,7 +17,7 @@ Welcome to my attempt at solving the [Advent of Code][aoc] challenges. This is m
 | `11` [**Dumbo Octopus**](https://github.com/sidmund/aoc-2021/blob/main/src/day11/Day11.kt) ([*puzzle*](https://adventofcode.com/2021/day/11)) | "Cellular automaton" |  
 | `12` [**Passage Pathing**](https://github.com/sidmund/aoc-2021/blob/main/src/day12/Day12.kt) ([*puzzle*](https://adventofcode.com/2021/day/12)) | Pathfinding |  
 | `13` [**Transparent Origami**](https://github.com/sidmund/aoc-2021/blob/main/src/day13/Day13.kt) ([*puzzle*](https://adventofcode.com/2021/day/13)) | Folding matrices |  
-| `14` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day14/Day14.kt) ([*puzzle*](https://adventofcode.com/2021/day/14)) |  
+| `14` [**Extended Polymerization**](https://github.com/sidmund/aoc-2021/blob/main/src/day14/Day14.kt) ([*puzzle*](https://adventofcode.com/2021/day/14)) | Counting bigrams |  
 | `15` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day15/Day15.kt) ([*puzzle*](https://adventofcode.com/2021/day/15)) |  
 | `16` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day16/Day16.kt) ([*puzzle*](https://adventofcode.com/2021/day/16)) |  
 | `17` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day17/Day17.kt) ([*puzzle*](https://adventofcode.com/2021/day/17)) |  
