@@ -2,6 +2,7 @@ package day11
 
 import measure
 import readTo2DArray
+import showtime
 
 // Including diagonals
 fun neighbors(x: Int, y: Int, width: Int, length: Int): List<Pair<Int, Int>> =
@@ -123,7 +124,7 @@ fun octoparty(levels: Array<Array<Int>>, steps: Int, verbose: Boolean): Int {
 }
 
 fun main() {
-    val part1 = measure({ println("Part 1 took $it ms") }) {
+    val part1 = measure({ print("[ ${showtime(it)} ]") }) {
         val testLevels = readTo2DArray("day11/test")
         val levels = readTo2DArray("day11/input")
 
@@ -133,7 +134,7 @@ fun main() {
     }
     println(" Answer: $part1")
 
-    val part2 = measure({ println("Part 2 took $it ms") }) {
+    val part2 = measure({ print("[ ${showtime(it)} ]") }) {
         val testLevels = readTo2DArray("day11/test")
         val levels = readTo2DArray("day11/input")
 

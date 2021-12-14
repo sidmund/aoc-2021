@@ -1,6 +1,8 @@
 import java.io.File
+import java.lang.Math.round
 import java.math.BigInteger
 import java.security.MessageDigest
+import kotlin.math.roundToInt
 
 /**
  * Reads lines from the given input txt file.
@@ -31,14 +33,24 @@ fun readTo2DArray(filename: String): Array<Array<Int>> = readInput(filename)
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
 
 /**
- * Measure execution time in ms of supplied function.
+ * Measure execution time in ns of supplied function.
  * @param logger a lambda expression to further process the elapsed time
  * @param function the function to measure the time of
  * @return the result of function
  */
 inline fun <T> measure(logger: (Long) -> Unit, function: () -> T): T {
-    val start = System.currentTimeMillis()
+    val start = System.nanoTime()
     val result: T = function.invoke()
-    logger.invoke(System.currentTimeMillis() - start)
+    logger.invoke(System.nanoTime() - start)
     return result
+}
+
+/**
+ * Convert a time in ns to a more sensible format for a human reader.
+ */
+fun showtime(ns: Long, decimals: Int = 1): String = when {
+    ns < 1e3 -> "$ns ns"
+    ns < 1e6 -> "${"%${4 + decimals}.${decimals}f".format(ns / 1e3)} us"
+    ns < 1e9 -> "${"%${4 + decimals}.${decimals}f".format(ns / 1e6)} ms"
+    else -> "${"%${4 + decimals}.${decimals}f".format(ns / 1e9)}  s"
 }

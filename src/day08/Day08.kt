@@ -2,6 +2,7 @@ package day08
 
 import measure
 import readInput
+import showtime
 
 // Model for a 7-segment display
 class Display(
@@ -120,13 +121,13 @@ fun main() {
         input.map { it[0].split(" ") }[i] to input.map { it[1].split(" ") }[i]
     }
 
-    val part1 = measure({ println("Part 1 took $it ms") }) {
+    val part1 = measure({ print("[ ${showtime(it)} ]") }) {
         check(part1(testCodes.map { it.second }) == 26)
         part1(codes.map { it.second }) // 476
     }
     println(" Answer: $part1")
 
-    val part2 = measure({ println("Part 2 took $it ms") }) {
+    val part2 = measure({ print("[ ${showtime(it)} ]") }) {
         check(part2(testCodes) == 61229)
         part2(codes) // 1011823
     }

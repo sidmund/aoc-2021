@@ -2,6 +2,7 @@ package day09
 
 import measure
 import readInput
+import showtime
 
 fun neighbors(x: Int, y: Int, width: Int, length: Int): List<Pair<Int, Int>> =
     when {
@@ -95,13 +96,13 @@ fun main() {
         .map { it.toCharArray().map(Char::digitToInt).toTypedArray() }
         .toTypedArray()
 
-    val part1 = measure({ println("Part 1 took $it ms") }) {
+    val part1 = measure({ print("[ ${showtime(it)} ]") }) {
         check(risk(testHeightmap) == 15)
         risk(heightmap) // 532
     }
     println(" Answer: $part1")
 
-    val part2 = measure({ println("Part 2 took $it ms") }) {
+    val part2 = measure({ print("[ ${showtime(it)} ]") }) {
         check(basinSize(testHeightmap) == 1134)
         basinSize(heightmap) // 1110780
     }

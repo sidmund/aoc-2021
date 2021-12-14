@@ -2,6 +2,7 @@ package day10
 
 import measure
 import readInput
+import showtime
 
 val ERROR = mapOf(
     ')' to 3,
@@ -82,13 +83,13 @@ fun main() {
     val testInput = readInput("day10/test")
     val input = readInput("day10/input")
 
-    val part1 = measure({ println("Part 1 took $it ms") }) {
+    val part1 = measure({ print("[ ${showtime(it)} ]") }) {
         check(corrupt(testInput) == 26397)
         corrupt(input) // 166191
     }
     println(" Answer: $part1")
 
-    val part2 = measure({ println("Part 2 took $it ms") }) {
+    val part2 = measure({ print("[ ${showtime(it)} ]") }) {
         check(closeLines(testInput.filter { !isLineCorrupt(it) }) == 288957L)
         closeLines(input.filter { !isLineCorrupt(it) }) // 1152088313
     }

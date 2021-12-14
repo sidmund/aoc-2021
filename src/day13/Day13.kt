@@ -2,6 +2,7 @@ package day13
 
 import measure
 import readInput
+import showtime
 import kotlin.math.max
 import kotlin.math.min
 
@@ -128,7 +129,7 @@ fun main() {
         var (width, height) = (coords.maxOf { it.first } + 1 to coords.maxOf { it.second } + 1)
         var paper = Array(height) { y -> Array(width) { x -> coords.contains(x to y) } }
 
-        val part1 = measure({ print("[$it ms]") }) {
+        val part1 = measure({ print("[ ${showtime(it)} ]") }) {
             val (axis, line) = instructs[0]
                 paper = when (axis) {
                     "x" -> foldX(paper, width, height, line)
@@ -140,7 +141,7 @@ fun main() {
         }
         println(" Answer: $part1 (${if (answers.first == part1) "correct" else "wrong"})")
 
-        val part2 = measure({ print("[$it ms]") }) {
+        val part2 = measure({ print("[ ${showtime(it)} ]") }) {
             // Skip first one (already done in Part 1) to ~half the computation time
             for (i in 1 until instructs.size) {
                 val (axis, line) = instructs[i]

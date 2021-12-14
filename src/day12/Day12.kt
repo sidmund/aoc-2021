@@ -2,6 +2,7 @@ package day12
 
 import measure
 import readInput
+import showtime
 
 // returns just the path count
 fun pathfinder(
@@ -51,12 +52,12 @@ fun main() {
             nodes[to]?.add(from)
         }
 
-        val part1 = measure({ println("Part 1 took $it ms") }) {
+        val part1 = measure({ print("[ ${showtime(it)} ]") }) {
             pathfinder(nodes, twice = false)
         }
         println(" Answer: $part1 (${if (answers.first == part1) "correct" else "wrong"})")
 
-        val part2 = measure({ println("Part 2 took $it ms") }) {
+        val part2 = measure({ print("[ ${showtime(it)} ]") }) {
             pathfinder(nodes, twice = true)
         }
         println(" Answer: $part2 (${if (answers.second == part2) "correct" else "wrong"})")
