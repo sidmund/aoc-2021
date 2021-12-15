@@ -18,7 +18,7 @@ Welcome to my attempt at solving the [Advent of Code][aoc] challenges. This is m
 | `12` [**Passage Pathing**](https://github.com/sidmund/aoc-2021/blob/main/src/day12/Day12.kt) ([*puzzle*](https://adventofcode.com/2021/day/12)) | Pathfinding |  
 | `13` [**Transparent Origami**](https://github.com/sidmund/aoc-2021/blob/main/src/day13/Day13.kt) ([*puzzle*](https://adventofcode.com/2021/day/13)) | Folding matrices |  
 | `14` [**Extended Polymerization**](https://github.com/sidmund/aoc-2021/blob/main/src/day14/Day14.kt) ([*puzzle*](https://adventofcode.com/2021/day/14)) | Counting bigrams |  
-| `15` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day15/Day15.kt) ([*puzzle*](https://adventofcode.com/2021/day/15)) |  
+| `15` [**Chiton**](https://github.com/sidmund/aoc-2021/blob/main/src/day15/Day15.kt) ([*puzzle*](https://adventofcode.com/2021/day/15)) | Heuristic pathfinding |  
 | `16` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day16/Day16.kt) ([*puzzle*](https://adventofcode.com/2021/day/16)) |  
 | `17` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day17/Day17.kt) ([*puzzle*](https://adventofcode.com/2021/day/17)) |  
 | `18` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day18/Day18.kt) ([*puzzle*](https://adventofcode.com/2021/day/18)) |  
