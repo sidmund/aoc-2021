@@ -20,7 +20,7 @@ Welcome to my attempt at solving the [Advent of Code][aoc] challenges. This is m
 | `14` [**Extended Polymerization**](https://github.com/sidmund/aoc-2021/blob/main/src/day14/Day14.kt) ([*puzzle*](https://adventofcode.com/2021/day/14)) | Counting bigrams |  
 | `15` [**Chiton**](https://github.com/sidmund/aoc-2021/blob/main/src/day15/Day15.kt) ([*puzzle*](https://adventofcode.com/2021/day/15)) | Heuristic pathfinding |  
 | `16` [**Packet Decoder**](https://github.com/sidmund/aoc-2021/blob/main/src/day16/Day16.kt) ([*puzzle*](https://adventofcode.com/2021/day/16)) | Binary operations |  
-| `17` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day17/Day17.kt) ([*puzzle*](https://adventofcode.com/2021/day/17)) |  
+| `17` [**Trick Shot**](https://github.com/sidmund/aoc-2021/blob/main/src/day17/Day17.kt) ([*puzzle*](https://adventofcode.com/2021/day/17)) | Kinematics |  
 | `18` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day18/Day18.kt) ([*puzzle*](https://adventofcode.com/2021/day/18)) |  
 | `19` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day19/Day19.kt) ([*puzzle*](https://adventofcode.com/2021/day/19)) |  
 | `20` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day20/Day20.kt) ([*puzzle*](https://adventofcode.com/2021/day/20)) |  
