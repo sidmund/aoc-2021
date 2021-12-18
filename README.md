@@ -21,7 +21,7 @@ Welcome to my attempt at solving the [Advent of Code][aoc] challenges. This is m
 | `15` [**Chiton**](https://github.com/sidmund/aoc-2021/blob/main/src/day15/Day15.kt) ([*puzzle*](https://adventofcode.com/2021/day/15)) | Heuristic pathfinding |  
 | `16` [**Packet Decoder**](https://github.com/sidmund/aoc-2021/blob/main/src/day16/Day16.kt) ([*puzzle*](https://adventofcode.com/2021/day/16)) | Binary operations |  
 | `17` [**Trick Shot**](https://github.com/sidmund/aoc-2021/blob/main/src/day17/Day17.kt) ([*puzzle*](https://adventofcode.com/2021/day/17)) | Kinematics |  
-| `18` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day18/Day18.kt) ([*puzzle*](https://adventofcode.com/2021/day/18)) |  
+| `18` [**Snail Fish**](https://github.com/sidmund/aoc-2021/blob/main/src/day18/Day18.kt) ([*puzzle*](https://adventofcode.com/2021/day/18)) | Pairs of numbers |  
 | `19` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day19/Day19.kt) ([*puzzle*](https://adventofcode.com/2021/day/19)) |  
 | `20` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day20/Day20.kt) ([*puzzle*](https://adventofcode.com/2021/day/20)) |  
 | `21` [**TBD**](https://github.com/sidmund/aoc-2021/blob/main/src/day21/Day21.kt) ([*puzzle*](https://adventofcode.com/2021/day/21)) |  
