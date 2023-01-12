@@ -3,6 +3,7 @@ package day15
 import measure
 import readTo2DArray
 import showtime
+import kotlin.math.abs
 
 private const val DAY = 15
 
@@ -19,13 +20,17 @@ fun neighbors(x: Int, y: Int, width: Int, height: Int, tileFactor: Int): List<Po
         add(Point(x, y + 1))
 }
 
+fun manhattan(cur: Point, goal: Point): Int {
+    return abs(goal.x - cur.x) + abs(goal.y - goal.y)
+}
+
 fun dijkstra(map: Array<Array<Int>>, width: Int, height: Int, tileFactor: Int): Int {
     val start = Point(0, 0)
     val goal = Point(width * tileFactor - 1, height * tileFactor - 1)
 
     val frontier = mutableListOf<Pair<Int, Point>>()
     val origin = mutableMapOf<Point, Point>()
-    val cost = mutableMapOf<Point, Int>()
+    val costs = mutableMapOf<Point, Int>()
 
     frontier.add(0 to start)
     while (frontier.isNotEmpty()) {
@@ -37,16 +42,16 @@ fun dijkstra(map: Array<Array<Int>>, width: Int, height: Int, tileFactor: Int): 
 
         for (next in neighbors(cur.x, cur.y, width, height, tileFactor)) {
             val nextCost = map[next.y % width][next.x % width] + next.x / width + next.y / height
-            val newCost = (cost[cur] ?: 0) + (if (nextCost > 9) (nextCost + 1) % 10 else nextCost)
-            if (next !in cost || newCost < cost[next]!!) {
-                frontier.add(newCost to next)
+            val cost = (costs[cur] ?: 0) + (if (nextCost > 9) (nextCost + 1) % 10 else nextCost)
+            if (next !in costs || cost < costs[next]!!) {
+                frontier.add(cost to next)
                 origin[next] = cur
-                cost[next] = newCost
+                costs[next] = cost
             }
         }
     }
 
-    return cost[goal]!!
+    return costs[goal]!!
 }
 
 fun main() {
